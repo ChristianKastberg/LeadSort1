@@ -1,0 +1,762 @@
+
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="da" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="da" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="da" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="da" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="da" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+<script type="text/javascript">var _0x8947=["\x6D\x44\x63\x4E\x69\x56\x65\x44"];</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"2a9add332d",applicationID:"449599023"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<title>Vin - køb kvalitetsvine online til Danmarks laveste priser hos Andrupvin.dk</title>
+<meta name="description" content="" />
+<meta name="keywords" content="rødvin, hvidvin, portvin, spiritus" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<link rel="icon" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/favicon.ico?mt=1523276876" type="image/x-icon" />
+<link rel="shortcut icon" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/favicon.ico?mt=1523276876" type="image/x-icon" />
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = 'https://www.andrupvin.dk/js/blank.html';
+    var BLANK_IMG = 'https://www.andrupvin.dk/js/spacer.gif';
+//]]>
+</script>
+<![endif]-->
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/amasty/amlabel/amlabel.css?mt=1542357206" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/base/default/css/amasty/ampromo/styles.css?mt=1524119722" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/amshopby.css?mt=1523276873" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/clerk/style.css?mt=1523606884" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/dailydeal/css/dailydeal.css?mt=1529303712" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/base/default/dailydeal/css/circle-countdown.css?mt=1462274836" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/base/default/andruppos/styles.css?mt=1515143392" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/base/default/basecart/css/basecart.css?mt=1523538032" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/boxofwine/boxofwine.css?mt=1586264035" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/base/default/fbmessenger/fbmessenger.css?mt=1500386954" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/nextshipment/css/nextshipment.css?mt=1523276927" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/sommelier/styles.css?mt=1587028138" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/reset.css?mt=1523276875" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/base.css?mt=1539781133" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/fonts.css?mt=1523276874" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/layout.css?mt=1574850179" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/buttons.css?mt=1523276874" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/forms.css?mt=1536830317" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/footer.css?mt=1527661339" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/navigation2019.css?mt=1604401829" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/content.css?mt=1573635883" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/catalog.css?mt=1638868283" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/product2019.css?mt=1571726360" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/checkout.css?mt=1622720294" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/customer.css?mt=1523276874" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/wishlist.css?mt=1523276875" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/css/theme.css?mt=1608106756" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/base/default/css/theme-secret-bottles.css" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/base/default/css/theme-julegaver.css" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/lib/sidepanel/sidepanel.css?mt=1557402763" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/lib/sidepanel/sidepanel-theme.css?mt=1557406034" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/lib/slick-slider/slick-theme.css?mt=1523276926" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/lib/slick-slider/slick.css?mt=1523276926" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/lib/fancybox/jquery.fancybox.css?mt=1523276923" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/lib/tipr/tipr.css?mt=1523276927" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/andrupvin/default/c-portfolio/c-portfolio.css?mt=1643325293" media="all" />
+<script type="text/javascript" src="https://www.andrupvin.dk/media/js/af14c77ed4ae429881aa522c530a4902.js"></script>
+<script type="text/javascript" src="https://www.andrupvin.dk/media/js/fba5210548faf33e22b79c8508b19072.js" async></script>
+<!--[if  (lte IE 8) & (!IEMobile)]>
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/rwd/default/css/styles-ie8.css?mt=1450446027" media="all" />
+<link rel="stylesheet" data-priority="false" type="text/css" href="https://www.andrupvin.dk/skin/frontend/rwd/default/css/madisonisland-ie8.css?mt=1450446027" media="all" />
+<![endif]-->
+
+<script type="text/javascript">
+//<![CDATA[
+Mage.Cookies.path     = '/';
+Mage.Cookies.domain   = '.www.andrupvin.dk';
+//]]>
+</script>
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = ["HK","IE","MO","PA"];
+//]]>
+</script>
+    <!--Aromicon Google Universal Analytics Section start -->
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-78688582-1', 'www.andrupvin.dk');
+        ga('set', 'anonymizeIp', false);
+                                                        ga('send', 'pageview');
+                    </script>
+        <!--Aromicon Google Universal Analytics Section end -->
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1796188343995866');
+    fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1796188343995866&ev=PageView&noscript=1"
+        /></noscript>
+<!-- End Facebook Pixel Code -->
+	
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lobster+Two:400italic" rel="stylesheet" type="text/css" />
+	
+	<style>
+		/* featured deal design */
+				.dd-featured-deal .dd-content { background:#FAFAFA; }
+		.dd-featured-deal .dd-content:before { background:#FAFAFA; }
+		.dd-featured-deal .dd-content:after { background:#FAFAFA; }
+		.dd-featured-deal .dd-header .dd-image:before { background:#FAFAFA; }
+		.dd-featured-deal .dd-header .dd-image:after { background:#FAFAFA; }
+		.dd-featured-deal .dd-content .dd-title { color:#F04D3B !important; }
+		.dd-featured-deal .dd-content .product_name { color:#333333 !important; }
+		.dd-featured-deal .dd-content .dd-actions button { color:#FFFFFF !important; }
+				.dd-featured-deal .dd-header .dd-price .price-box p span.price { background: rgba(250, 250, 250, 0.9);  }
+		.dd-featured-deal .dd-header .dd-price .price-box p.old-price span.price { color:#A0A0A0 !important; }
+		.dd-featured-deal .dd-header .dd-price .price-box p.special-price span.price { color:#32CC5F !important; }
+
+		/* product page design */
+		.main-countdown .countdown-title { color:#B80028 !important; }
+		.qty-text { color:#333333 !important; background:#FFFFFF !important; border-color:#DDDDDD !important; }
+		.qty-text b { color:#F04D3B !important; }
+		.main-countdown .qty-text { color:#333333 !important; }
+		.main-countdown .qty-text b { color:#B80028 !important; }
+		.block-deals .block-content #block-deals .item .product-details .deal-qty { color:#333333 !important; }
+		.block-deals .block-content #block-deals .item .product-details .deal-qty b { color:#F04D3B !important; }
+
+
+
+		/* circular countdown */
+			
+			.countdown_timer li { color:#333333 !important; }
+		
+		/* flip countdown */
+		
+		/* simple countdown */
+			</style>
+<script type="text/javascript" src="https://chimpstatic.com/mcjs-connected/js/users/7c9a1d7e4daf154c39564d248/5f7f27c167339c71d177e1a37.js" defer></script><script type="text/javascript" async>
+    var w = document.createElement("script");
+    w.type = "text/javascript";
+    w.src = "//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js";
+    w.async = true;
+    document.head.appendChild(w);
+</script>
+<script type="text/javascript">
+	(function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+	a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
+	f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
+	tp('register','ScpHecWmWQRRpUq5');
+</script>
+<script type="text/javascript">
+    function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function tryParseJson(str) {
+        if (typeof str === 'string') {
+            try {
+                return JSON.parse(str);
+            } catch (e) {
+                return false;
+            }
+        }
+        return false;
+    }
+
+    if (inIframe()) {
+        try {
+            window.addEventListener('message', function (e) {
+                var adminOrign = new URL(window.location).hostname;
+                if (!e.data || e.origin.indexOf(adminOrign) === -1) {
+                    return;
+                }
+                if (typeof TrustpilotPreview !== 'undefined') {
+                    if (typeof e.data === 'string' && e.data === 'submit') {
+                        TrustpilotPreview.sendTrustboxes();
+                    } else {
+                        jsonData = JSON.parse(e.data);
+                        if (jsonData.trustbox) {
+                            TrustpilotPreview.setSettings(jsonData.trustbox);
+                        } else if (jsonData.customised) {
+                            TrustpilotPreview.updateActive(jsonData.customised);
+                        }
+                    }
+                } else {
+                    var settings = tryParseJson(e.data);
+                    if (settings) {
+                        var p = document.createElement("script");
+                        p.type = "text/javascript";
+                        p.onload = function () {
+                            const iFrame = e.source.parent.document.getElementById('configuration_iframe').contentWindow;
+                            TrustpilotPreview.init(['//ecommplugins-scripts.trustpilot.com/v2.1/css/preview.css'], settings, iFrame, e.source);
+                        };
+                        p.src = '//ecommplugins-scripts.trustpilot.com/v2.1/js/preview.js';
+                        document.head.appendChild(p);
+                    }
+                }
+            });
+        }
+        catch (e) {
+            if (typeof logTrustpilotError !== "function") {
+                var script = document.createElement("script");
+                script.src = '//ecommplugins-scripts.trustpilot.com/js/sentryLog.js'
+                script.onload = function() {
+                    logTrustpilotError(e);
+                };
+                document.head.appendChild(script);
+            } else {
+                logTrustpilotError(e)
+            }
+        }
+    }
+</script>
+<script type="text/javascript" async>
+    const trustpilot_trustbox_settings = {"trustboxes":[]};
+    if (trustpilot_trustbox_settings) {
+        document.addEventListener('DOMContentLoaded', function() {
+            tp('trustBox', trustpilot_trustbox_settings);
+        });
+    }
+</script><script type="text/javascript">//<![CDATA[
+        var Translator = new Translate({"HTML tags are not allowed":"HTML tags er ikke tilladt","Please select an option.":"V\u00e6lg venligst en af mulighederne.","This is a required field.":"Feltet skal udfyldes.","Please enter a valid number in this field.":"Indtast venligst kun heltal i dette felt.","The value is not within the specified range.":"V\u00e6rdien er ikke inden for det angivne interval.","Please use numbers only in this field. Please avoid spaces or other characters such as dots or commas.":"Feltet m\u00e5 kun indeholde heltal, ung\u00e5 venligst mellemrum eller andre karakterer s\u00e5som punktum og komma.","Please use letters only (a-z or A-Z) in this field.":"Brug kun bogstaver (a-z or A-Z) i dette felt.","Please use only letters (a-z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Brug kun bogstaver (a-z) eller heltal (0-9) eller underscore (_) i dette felt., f\u00f8rste karakter skal v\u00e6re et bogstav.","Please use only letters (a-z or A-Z) or numbers (0-9) only in this field. No spaces or other characters are allowed.":"Brug kun bogstaver (a-z eller A-Z) eller tal (0-9) i dette felt. Ingen mellemrum eller andre tegn.","Please use only letters (a-z or A-Z) or numbers (0-9) or spaces and # only in this field.":"Brug kun bogstaver (a-z eller A-Z) eller tal (0-9) eller mellemrum og # i dette felt.","Please enter a valid phone number. For example (123) 456-7890 or 123-456-7890.":"Indtast venligst et gyldigt telefonnummer, eks. (+45) 10 10 10 10","Please enter a valid fax number. For example (123) 456-7890 or 123-456-7890.":"Indtast et gyldigt faxnummer. F.eks. 12 34 56 78","Please enter a valid date.":"Indtast venligst en gyldig dato.","Please enter a valid email address. For example johndoe@domain.com.":"Ugyldig e-mailadresse","Please use only visible characters and spaces.":"Brug kun synlige tegn og mellemrum.","Please make sure your passwords match.":"Verificer venligst at dine kodeord er ens.","Please enter a valid URL. Protocol is required (http:\/\/, https:\/\/ or ftp:\/\/)":"Indtast en gyldig URL. Protokol er obligatorisk (http:\/\/, https:\/\/ eller ftp:\/\/)","Please enter a valid URL Key. For example \"example-page\", \"example-page.html\" or \"anotherlevel\/example-page\".":"Indtast en gyldig URL-n\u00f8gle. F.eks. \"min-side\", \"min-side.html\" eller \"min-side\/min-underside\".","Please enter a valid XML-identifier. For example something_1, block5, id-4.":"Indtast et gyldigt XML-id. F.eks. blok_1, block5, id-4.","Please enter a valid social security number. For example 123-45-6789.":"Indtast venligst et gyldigt CPR-nummer, eks. 190570-2369.","Please enter a valid zip code. For example 90602 or 90602-1234.":"Indtast venligst et gyldigt postnummer, eks. 6430 eller 8000.","Please enter a valid zip code.":"Indtast venligst et gyldigt postnummer.","Please use this date format: dd\/mm\/yyyy. For example 17\/03\/2006 for the 17th of March, 2006.":"Brug venligst dette datoformat: dd\/mm\/yyyy, eks. 17\/03\/2006 for d. 17. marts 2006.","Please enter a valid $ amount. For example $100.00.":"V\u00e6lg venligst et gyldigt bel\u00f8b i kr. For eksempel kr. 100,00.","Please select one of the above options.":"V\u00e6lg venligst en af mulighederne ovenfor","Please select one of the options.":"V\u00e6lg venligst en af mulighederne","Please select State\/Province.":"V\u00e6lg venligst region","Please enter a number greater than 0 in this field.":"Indtast venligst et tal st\u00f8rre end 0.","Please enter a number 0 or greater in this field.":"Indtast et tal 0 eller st\u00f8rre i dette felt.","Please enter a valid credit card number.":"Indtast venligst et gyldigt kreditkortnummer.","Credit card number does not match credit card type.":"Kortnummer stemmer ikke overens med korttype.","Card type does not match credit card number.":"Korttype stemmer ikke overens med kortnummer.","Incorrect credit card expiration date.":"Forkert udl\u00f8bsdato for kort.","Please enter a valid credit card verification number.":"Indtast venligst en gyldig verifikationskode (CVC).","Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Feltet m\u00e5 kun indeholde bogstaver (a-z or A-Z), tal (0-9) eller underscore (_), og f\u00f8rste tegn skal v\u00e6re et bogstav.","Please input a valid CSS-length. For example 100px or 77pt or 20em or .5ex or 50%.":"Angiv venligst en gyldig CSS-l\u00e6ngde. For eksempel 100px, 77pt, 20em, .5ex eller 50%.","Text length does not satisfy specified text range.":"Tekstl\u00e6ngden er ikke inden for det angivne interval.","Please enter a number lower than 100.":"Indtast venligst et tal mindre end 100.","Please select a file":"V\u00e6lg venligst en fil","Please enter issue number or start date for switch\/solo card type.":"Indtast udstedelsesnummer eller startdato for switch\/solo korttypen.","Please wait, loading...":"Vent venligst, henter data...","This date is a required value.":"Denne dato skal udfyldes.","Please enter a valid day (1-%d).":"Indtast en gyldig dag (1-%d).","Please enter a valid month (1-12).":"Indtast venligst en gyldigt m\u00e5ned (1-12).","Please enter a valid year (1900-%d).":"Indtast venligst et gyldigt \u00e5rstal (1900-%d).","Please enter a valid full date":"Indtast venligst en komplet gyldig dato","Complete":"Fuldendt","Add Products":"Tilf\u00f8j produkter","Please choose to register or to checkout as a guest":"V\u00e6lg om du vil registrere dig eller bestille som g\u00e6st","Your order cannot be completed at this time as there is no shipping methods available for it. Please make necessary changes in your shipping address.":"Din ordre kan ikke gennemf\u00f8res da der ikke er nogen tilg\u00e6ngelige leveringsmetoder. Kontroller din leveringsadresse.","Please specify shipping method.":"V\u00e6lg en leveringsmetode.","Your order cannot be completed at this time as there is no payment methods available for it.":"Din ordre kan ikke gennemf\u00f8res da der ikke er nogen tilg\u00e6ngelige betalingsmetoder.","Please specify payment method.":"V\u00e6lg en betalingsmetode.","Add to Cart":"L\u00e6g i kurv","In Stock":"P\u00e5 lager","Out of Stock":"Ikke p\u00e5 lager"});
+        //]]></script><meta name="facebook-domain-verification" content="3bet8k50p4wcm6n7bzngudjjwy56zn" />
+<script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js"
+      data-culture="DA" type="text/javascript"></script>
+<!-- Adform Tracking Code BEGIN -->
+<script type="text/javascript">
+    window._adftrack = {
+        pm: 364730,
+        divider: encodeURIComponent('|'),
+        pagename: encodeURIComponent('Retargeting TP')
+    };
+    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+</script>
+<noscript>
+    <p style="margin:0;padding:0;border:0;">
+        <img src="https://track.adform.net/Serving/TrackPoint/?pm=364730&ADFPageName=Retargeting%20TP&ADFdivider=|" width="1" height="1" alt="" />
+    </p>
+</noscript>
+<!-- Adform Tracking Code END -->
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js" async></script>
+<!-- End Trustbox script -->
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End Trustbox script -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KQSR3TW');</script>
+<!-- End Google Tag Manager -->
+ <meta property="og:title" content="Vin - køb kvalitetsvine online til Danmarks laveste priser hos Andrupvin.dk" />
+ <meta property="og:type" content="article" />
+ <meta property="og:url" content="https://www.andrupvin.dk/checkouttester/index/success/?___store=danish" />
+ <meta property="og:description" content="" />
+ <meta property="og:site_name" content="Danish" />
+</head>
+<body class=" checkouttester-index-success checkout-onepage-success">
+
+	
+	<div id="notificationbarplus">
+		<div id="notificationbarplus-content">
+			<p><span style="font-size: medium;"><b>RIPASSO KUP. BL&Oslash;D, BALANCERET OG FRUGTRIG EL BALON RIPASSO TIL KUN 49,50 KR. DET ER HALV PRIS. <a href="/el-balon-ripasso-della-valpolicella-2018" target="_self">L&AElig;S MERE HER</a>.</b></span></p>			<div class="clearer"></div>
+		</div>
+					<div id="notificationbarplus-close">×</div>
+			</div>
+		
+	<script type="text/javascript">
+		notificationBarPlus = new notificationBarPlus();
+		notificationBarPlus.messageId = 'balonripasso';
+		notificationBarPlus.isCloseable = 1;
+		notificationBarPlus.isFixed = 0;
+		notificationBarPlus.init();
+	</script>
+	
+	<style>
+		
+		#notificationbarplus {
+			position: relative;
+						background-color:#FFDD00;		}
+		
+		#notificationbarplus-content {
+			text-align:center;
+			padding: 8px 40px;
+			position:relative; 
+			color:#000000;		}
+		
+		#notificationbarplus-close {
+			position:absolute;
+			top: 16px;
+			right: 13px;
+			font-size: 25px;
+			line-height: 0;
+			cursor: pointer;
+			color:#000000;		}
+
+		
+	</style>
+	
+<!-- Facebook Conversion Code for Conversions -->
+<script>
+    fbq('track', 'Purchase', {value: '387.9', currency: 'DKK'});
+</script>
+
+<script type="text/javascript" src="test.js"></script>
+<input type="button" class="button_pw" value="Find That String" onclick="FindForReal();">
+
+
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1796188343995866&ev=Purchase&value=387.9&currency=DKK&noscript=1"
+        /></noscript>
+<div class="wrapper">
+        <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>Det lader til at JavaScript er deaktiveret i din browser.</strong><br />
+                    Du skal have JavaScript slået til i din browser for at kunne bruge alle funktionerne på dette website.                </p>
+            </div>
+        </div>
+    </noscript>
+    <div class="page">
+        
+<div class="header-topbar">
+	<div class="page-header">
+		<div class="header-usps">
+			<ul>
+<li>Dag til dag levering</li>
+<li>Fri fragt v/ 499,-</li>
+<li>Tilfredshedsgaranti</li>
+<li>Prisgaranti</li>
+</ul>		</div>
+		<div class="header-tabs">
+			<ul>
+		<li class="tab tab-shop active">
+		<a href="https://www.andrupvin.dk/">Shop</a>
+	</li>
+	<li class="tab tab-account">
+	    		    <a href="https://www.andrupvin.dk/customer/account/login/">Log ind</a>
+        	</li>
+</ul>		</div>
+	</div>
+</div>
+<header id="header" class="page-header">
+				
+    <div class="page-header-container">
+        <a class="logo" href="https://www.andrupvin.dk/">
+            <img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/images/logo.png" alt="Køb din rødvin, hvidvin, rosevin, mousserende vin, champagne, portvin, dessertvin og spiritus online" class="large" />
+            <img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/images/logo.png" alt="Køb din rødvin, hvidvin, rosevin, mousserende vin, champagne, portvin, dessertvin og spiritus online" class="small" />
+        </a>
+
+                <div class="store-language-container"></div>
+
+                <div id="header-search" class="skip-content">
+            <!-- TrustBox widget - Micro Combo -->
+            <div class="trustpilot-widget" data-locale="da-DK" data-template-id="5419b6ffb0d04a076446a9af" data-businessunit-id="541adc0500006400057a66a5" data-style-height="20px" data-style-width="100%" data-theme="light">
+              <a href="https://dk.trustpilot.com/review/andrupvin.dk" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+            <!-- End TrustBox widget -->            
+            
+<form id="search_mini_form" action="https://www.andrupvin.dk/catalogsearch/result/" method="get">
+    <div class="input-box">
+        <label for="search">Søg:</label>
+        <input id="search" type="search" name="q" value="" class="input-text required-entry" maxlength="128" placeholder="Søg produkter, vintyper, druer osv." />
+        <button type="submit" title="Søg" class="button search-button"><span><span>Søg</span></span></button>
+    </div>
+
+    <div id="search_autocomplete" class="search-autocomplete"></div>
+    <script type="text/javascript">
+    //<![CDATA[
+        var searchForm = new Varien.searchForm('search_mini_form', 'search', '');
+        searchForm.initAutocomplete('https://www.andrupvin.dk/catalogsearch/ajax/suggest/', 'search_autocomplete');
+    //]]>
+    </script>
+</form>
+        </div>
+
+                <div id="header-account" class="skip-content">
+            <div class="links">
+        <ul>
+                                    <li class="first" ><a href="https://www.andrupvin.dk/customer/account/" title="Mit Andrupvin" >Mit Andrupvin</a></li>
+                                                <li ><a href="https://www.andrupvin.dk/wishlist/" title="Min ønskeseddel" >Min ønskeseddel</a></li>
+                                                <li ><a href="https://www.andrupvin.dk/customer/account/create/" title="Opret" >Opret</a></li>
+                                                <li class=" last" ><a href="https://www.andrupvin.dk/customer/account/login/" title="Log ind" >Log ind</a></li>
+                        </ul>
+</div>
+        </div>
+
+                <div class="skip-links">
+            <a href="#header-nav" class="skip-link skip-nav">
+                <span class="icon"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/menu.svg"/></span>
+                <span class="label">Menu</span>
+            </a>
+
+            <a href="#header-search" class="skip-link skip-search">
+                <span class="icon"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/search-white.svg"/></span>
+                <span class="label">Søg</span>
+            </a>
+
+            <div class="skip-link skip-stars">
+                <div><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/Andrupvin_5-stjerner_white.svg"/></div>
+            </div>
+
+            <div class="account-cart-wrapper">
+	            	                            <a href="https://www.andrupvin.dk/customer/account/" data-target-element="#header-account" class="skip-link skip-account">
+                    <span class="icon"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/account.svg"/></span>
+                    <span class="label">Kundekonto</span>
+                </a>
+                
+                <div class="header-minicart-wrapper">
+	                <div class="header-favorites">
+		                <a href="https://www.andrupvin.dk/wishlist/">
+			                <img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/favorites.svg" width="30"/>
+			                <div class="label">Favoritter</div>
+		                </a>
+	                </div>
+	
+	                	                <div class="header-minicart">
+	                    
+
+<a href="https://www.andrupvin.dk/checkout/cart/" data-target-element="#header-cart" class="skip-link skip-cart  no-count">
+	<span class="cart-contents">
+		<div class="cart-item-count">
+							0 varer					</div>
+		<div class="cart-amount-total"><span class="price">0,00 DKK</span></div>
+	</span>
+    <span class="icon"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/cart-white.svg"/></span>
+    <span class="label">Kurv</span>
+    <span class="count">0</span>
+</a>
+
+<div id="header-cart" class="block block-cart skip-content">
+    
+<div id="minicart-error-message" class="minicart-message"></div>
+<div id="minicart-success-message" class="minicart-message"></div>
+
+<div class="minicart-wrapper">
+
+    <p class="block-subtitle">
+        Seneste tilføjede vare(r)            </p>
+
+                    <p class="empty">Din indkøbskurv er tom.</p>
+
+    </div>
+</div>
+	                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="header-nav" class="skip-content">
+	<div class="nav-container">
+	    
+    <nav id="nav">
+        <ol class="nav-primary clearfix">
+            <li  class="level0 nav-1 first parent"><a href="https://www.andrupvin.dk/vine" class="level0 has-children">Vine</a><ul class="level0 menu-style-standard"><ul class="nav-wrap"><li class="level1 view-all"><a class="level1" href="https://www.andrupvin.dk/vine">Se alle Vine</a></li><ul class="level1 nav-grouped"><li  class="level1 nav-1-1 first parent"><a href="https://www.andrupvin.dk/vine/roedvin" class="level1 has-children">Rødvin</a><ul class="level1 menu-style-undermenu-start"><ul class="nav-wrap"><li class="level2 view-all"><a class="level2" href="https://www.andrupvin.dk/vine/roedvin">Se alle Rødvin</a></li><li  class="level2 nav-1-1-1 first"><a href="https://www.andrupvin.dk/vine/roedvin/italiensk-roedvin" class="level2 ">Italiensk rødvin</a></li><li  class="level2 nav-1-1-2"><a href="https://www.andrupvin.dk/vine/roedvin/spansk-roedvin" class="level2 ">Spansk rødvin</a></li><li  class="level2 nav-1-1-3"><a href="https://www.andrupvin.dk/vine/roedvin/australsk-roedvin" class="level2 ">Australsk rødvin</a></li><li  class="level2 nav-1-1-4"><a href="https://www.andrupvin.dk/vine/roedvin/fransk-roedvin" class="level2 ">Fransk rødvin</a></li><li  class="level2 nav-1-1-5"><a href="https://www.andrupvin.dk/vine/roedvin/portugisisk-roedvin" class="level2 ">Portugisisk rødvin</a></li><li  class="level2 nav-1-1-6"><a href="https://www.andrupvin.dk/vine/roedvin/sydafrikansk-roedvin" class="level2 ">Sydafrikansk rødvin</a></li><li  class="level2 nav-1-1-7"><a href="https://www.andrupvin.dk/vine/roedvin/tysk-roedvin" class="level2 ">Tysk rødvin</a></li><li  class="level2 nav-1-1-8"><a href="https://www.andrupvin.dk/vine/roedvin/amerikansk-roedvin" class="level2 ">Amerikansk rødvin</a></li><li  class="level2 nav-1-1-9"><a href="https://www.andrupvin.dk/vine/roedvin/argentinsk-roedvin" class="level2 ">Argentinsk rødvin</a></li><li  class="level2 nav-1-1-10 last"><a href="https://www.andrupvin.dk/vine/roedvin/chilensk-roedvin" class="level2 ">Chilensk rødvin</a></li></ul></ul></li><li  class="level1 nav-1-2 parent"><a href="https://www.andrupvin.dk/vine/vintyper" class="level1 has-children">Vintyper</a><ul class="level1 menu-style-undermenu-slut"><ul class="nav-wrap"><li class="level2 view-all"><a class="level2" href="https://www.andrupvin.dk/vine/vintyper">Se alle Vintyper</a></li><li  class="level2 nav-1-2-1 first"><a href="https://www.andrupvin.dk/vine/vintyper/amarone" class="level2 ">Amarone</a></li><li  class="level2 nav-1-2-2"><a href="https://www.andrupvin.dk/vine/vintyper/barolo" class="level2 ">Barolo</a></li><li  class="level2 nav-1-2-3"><a href="https://www.andrupvin.dk/vine/vintyper/brunello" class="level2 ">Brunello</a></li><li  class="level2 nav-1-2-4"><a href="https://www.andrupvin.dk/vine/vintyper/ripasso" class="level2 ">Ripasso</a></li><li  class="level2 nav-1-2-5"><a href="https://www.andrupvin.dk/vine/vintyper/cotes-du-rhone" class="level2 ">Côtes du Rhône</a></li><li  class="level2 nav-1-2-6"><a href="https://www.andrupvin.dk/vine/vintyper/bourgogne" class="level2 ">Bourgogne</a></li><li  class="level2 nav-1-2-7 last"><a href="https://www.andrupvin.dk/vine/vintyper/bordeaux" class="level2 ">Bordeaux</a></li></ul></ul></li></ul><li  class="level1 nav-1-3 parent"><a href="https://www.andrupvin.dk/vine/hvidvin" class="level1 has-children">Hvidvin</a><ul class="level1"><ul class="nav-wrap"><li class="level2 view-all"><a class="level2" href="https://www.andrupvin.dk/vine/hvidvin">Se alle Hvidvin</a></li><li  class="level2 nav-1-3-1 first"><a href="https://www.andrupvin.dk/vine/hvidvin/italiensk-hvidvin" class="level2 ">Italiensk hvidvin</a></li><li  class="level2 nav-1-3-2"><a href="https://www.andrupvin.dk/vine/hvidvin/spansk-hvidvin" class="level2 ">Spansk hvidvin</a></li><li  class="level2 nav-1-3-3"><a href="https://www.andrupvin.dk/vine/hvidvin/australsk-hvidvin" class="level2 ">Australsk hvidvin</a></li><li  class="level2 nav-1-3-4"><a href="https://www.andrupvin.dk/vine/hvidvin/fransk-hvidvin" class="level2 ">Fransk hvidvin</a></li><li  class="level2 nav-1-3-5"><a href="https://www.andrupvin.dk/vine/hvidvin/sydafrikansk-hvidvin" class="level2 ">Sydafrikansk hvidvin</a></li><li  class="level2 nav-1-3-6"><a href="https://www.andrupvin.dk/vine/hvidvin/tysk-hvidvin" class="level2 ">Tysk hvidvin</a></li><li  class="level2 nav-1-3-7"><a href="https://www.andrupvin.dk/vine/hvidvin/amerikansk-hvidvin" class="level2 ">Amerikansk hvidvin</a></li><li  class="level2 nav-1-3-8"><a href="https://www.andrupvin.dk/vine/hvidvin/new-zealandsk-hvidvin" class="level2 ">New Zealandsk hvidvin</a></li><li  class="level2 nav-1-3-9"><a href="https://www.andrupvin.dk/vine/hvidvin/ostrigsk-hvidvin" class="level2 ">Østrigsk hvidvin</a></li><li  class="level2 nav-1-3-10"><a href="https://www.andrupvin.dk/vine/hvidvin/chilensk-hvidvin" class="level2 ">Chilensk hvidvin</a></li><li  class="level2 nav-1-3-11 last"><a href="https://www.andrupvin.dk/vine/hvidvin/portugisisk-hvidvin" class="level2 ">Portugisisk hvidvin</a></li></ul></ul></li><ul class="level1 nav-grouped"><li  class="level1 nav-1-4 parent"><a href="https://www.andrupvin.dk/vine/rosevin" class="level1 has-children">Rosévin</a><ul class="level1 menu-style-undermenu-start"><ul class="nav-wrap"><li class="level2 view-all"><a class="level2" href="https://www.andrupvin.dk/vine/rosevin">Se alle Rosévin</a></li><li  class="level2 nav-1-4-1 first"><a href="https://www.andrupvin.dk/vine/rosevin/italiensk-rosevin" class="level2 ">Italiensk rosévin</a></li><li  class="level2 nav-1-4-2"><a href="https://www.andrupvin.dk/vine/rosevin/fransk-rosevin" class="level2 ">Fransk rosèvin</a></li><li  class="level2 nav-1-4-3 last"><a href="https://www.andrupvin.dk/vine/rosevin/spansk-rosevin" class="level2 ">Spansk rosévin</a></li></ul></ul></li><li  class="level1 nav-1-5 parent"><a href="https://www.andrupvin.dk/vine/mousserende-vin" class="level1 has-children">Mousserende vin</a><ul class="level1"><ul class="nav-wrap"><li class="level2 view-all"><a class="level2" href="https://www.andrupvin.dk/vine/mousserende-vin">Se alle Mousserende vin</a></li><li  class="level2 nav-1-5-1 first"><a href="https://www.andrupvin.dk/vine/mousserende-vin/champagne" class="level2 ">Champagne</a></li><li  class="level2 nav-1-5-2"><a href="https://www.andrupvin.dk/vine/mousserende-vin/cremant" class="level2 ">Cremant</a></li><li  class="level2 nav-1-5-3"><a href="https://www.andrupvin.dk/vine/mousserende-vin/cava" class="level2 ">Cava</a></li><li  class="level2 nav-1-5-4"><a href="https://www.andrupvin.dk/vine/mousserende-vin/asti" class="level2 ">Asti</a></li><li  class="level2 nav-1-5-5 last"><a href="https://www.andrupvin.dk/vine/mousserende-vin/ovrigemousserende" class="level2 ">Øvrige</a></li></ul></ul></li><li  class="level1 nav-1-6 parent"><a href="https://www.andrupvin.dk/vine/dessertvin" class="level1 has-children">Dessertvin</a><ul class="level1 menu-style-undermenu-slut"><ul class="nav-wrap"><li class="level2 view-all"><a class="level2" href="https://www.andrupvin.dk/vine/dessertvin">Se alle Dessertvin</a></li><li  class="level2 nav-1-6-1 first"><a href="https://www.andrupvin.dk/vine/dessertvin/portvin" class="level2 ">Portvin m.v.</a></li><li  class="level2 nav-1-6-2 last"><a href="https://www.andrupvin.dk/vine/dessertvin/sode-vine" class="level2 ">Sød dessertvin</a></li></ul></ul></li></ul><li  class="level1 nav-1-7 last parent"><a href="https://www.andrupvin.dk/vine/passer-til" class="level1 has-children">Passer til</a><ul class="level1 menu-style-kun-overkategori"><ul class="nav-wrap"><li class="level2 view-all"><a class="level2" href="https://www.andrupvin.dk/vine/passer-til">Se alle Passer til</a></li><li  class="level2 nav-1-7-1 first"><a href="https://www.andrupvin.dk/vine/passer-til/and-og-gas" class="level2 ">And og gås</a></li><li  class="level2 nav-1-7-2"><a href="https://www.andrupvin.dk/vine/passer-til/vildt" class="level2 ">Vildt</a></li><li  class="level2 nav-1-7-3"><a href="https://www.andrupvin.dk/vine/passer-til/asiatisk-mad" class="level2 ">Asiatisk mad</a></li><li  class="level2 nav-1-7-4"><a href="https://www.andrupvin.dk/vine/passer-til/fisk" class="level2 ">Fisk</a></li><li  class="level2 nav-1-7-5"><a href="https://www.andrupvin.dk/vine/passer-til/skaldyr" class="level2 ">Skaldyr</a></li><li  class="level2 nav-1-7-6"><a href="https://www.andrupvin.dk/vine/passer-til/grill-mad" class="level2 ">Grill mad</a></li><li  class="level2 nav-1-7-7"><a href="https://www.andrupvin.dk/vine/passer-til/hygge" class="level2 ">Hygge</a></li><li  class="level2 nav-1-7-8"><a href="https://www.andrupvin.dk/vine/passer-til/oksekod" class="level2 ">Oksekød</a></li><li  class="level2 nav-1-7-9"><a href="https://www.andrupvin.dk/vine/passer-til/kalvekod" class="level2 ">Kalvekød</a></li><li  class="level2 nav-1-7-10"><a href="https://www.andrupvin.dk/vine/passer-til/svinekod" class="level2 ">Svinekød</a></li><li  class="level2 nav-1-7-11"><a href="https://www.andrupvin.dk/vine/passer-til/lam" class="level2 ">Lam</a></li><li  class="level2 nav-1-7-12"><a href="https://www.andrupvin.dk/vine/passer-til/pasta-og-pizza" class="level2 ">Pasta og pizza</a></li><li  class="level2 nav-1-7-13"><a href="https://www.andrupvin.dk/vine/passer-til/tapas-og-snacks" class="level2 ">Tapas og snacks</a></li><li  class="level2 nav-1-7-14"><a href="https://www.andrupvin.dk/vine/passer-til/varieret-buffet" class="level2 ">Varieret buffet</a></li><li  class="level2 nav-1-7-15"><a href="https://www.andrupvin.dk/vine/passer-til/ost" class="level2 ">Ost</a></li><li  class="level2 nav-1-7-16 last"><a href="https://www.andrupvin.dk/vine/passer-til/dessert-og-sodt" class="level2 ">Dessert og sødt</a></li></ul></ul></li><div class="tester hidden"><p><a href="/vintilbud"><img alt="" src="https://www.andrupvin.dk/media/wysiwyg/alle-vintilbud.jpg" /></a></p>
+<p><a href="/vine/vinhuse"><img alt="" src="https://www.andrupvin.dk/media/wysiwyg/se-vores-vinhuse.jpg" /></a></p>
+<p><a href="/vinguide"><img alt="" src="https://www.andrupvin.dk/media/wysiwyg/Vinblog_billede.png" /></a></p></div><li class="level1 featured-content"><p><a href="/vintilbud"><img alt="" src="https://www.andrupvin.dk/media/wysiwyg/alle-vintilbud.jpg" /></a></p>
+<p><a href="/vine/vinhuse"><img alt="" src="https://www.andrupvin.dk/media/wysiwyg/se-vores-vinhuse.jpg" /></a></p>
+<p><a href="/vinguide"><img alt="" src="https://www.andrupvin.dk/media/wysiwyg/Vinblog_billede.png" /></a></p></li></ul></ul></li><li  class="level0 nav-2 parent"><a href="https://www.andrupvin.dk/druer" class="level0 has-children">Druer</a><ul class="level0 menu-style-kategorier-inddelt-a-z"><ul class="nav-wrap"><li class="level1 view-all"><a class="level1" href="https://www.andrupvin.dk/druer">Se alle Druer</a></li><li  class="level1 nav-2-1 first"><a href="https://www.andrupvin.dk/druer/aglianico-vin" class="level1 ">Aglianico vin</a></li><li  class="level1 nav-2-2"><a href="https://www.andrupvin.dk/druer/albana-vin" class="level1 ">Albana vin</a></li><li  class="level1 nav-2-3"><a href="https://www.andrupvin.dk/druer/albarino-vin" class="level1 ">Albarino vin</a></li><li  class="level1 nav-2-4"><a href="https://www.andrupvin.dk/druer/alicante-bouschet" class="level1 ">Alicante Bouschet vin</a></li><li  class="level1 nav-2-5"><a href="https://www.andrupvin.dk/druer/barbera-vin" class="level1 ">Barbera vin</a></li><li  class="level1 nav-2-6"><a href="https://www.andrupvin.dk/druer/bonarda-vin" class="level1 ">Bonarda vin</a></li><li  class="level1 nav-2-7"><a href="https://www.andrupvin.dk/druer/cabernet-franc-vin" class="level1 ">Cabernet Franc vin</a></li><li  class="level1 nav-2-8"><a href="https://www.andrupvin.dk/druer/cabernet-sauvignon-vin" class="level1 ">Cabernet Sauvignon vin</a></li><li  class="level1 nav-2-9"><a href="https://www.andrupvin.dk/druer/cariena-vin" class="level1 ">Cariena vin</a></li><li  class="level1 nav-2-10"><a href="https://www.andrupvin.dk/druer/carignan-vin" class="level1 ">Carignan vin</a></li><li  class="level1 nav-2-11"><a href="https://www.andrupvin.dk/druer/carmenere-vin" class="level1 ">Carmenere vin</a></li><li  class="level1 nav-2-12"><a href="https://www.andrupvin.dk/druer/chardonnay-vin" class="level1 ">Chardonnay vin</a></li><li  class="level1 nav-2-13"><a href="https://www.andrupvin.dk/druer/chenin-blanc-vin" class="level1 ">Chenin Blanc vin</a></li><li  class="level1 nav-2-14"><a href="https://www.andrupvin.dk/druer/cinsault-vin" class="level1 ">Cinsault vin</a></li><li  class="level1 nav-2-15"><a href="https://www.andrupvin.dk/druer/cortese-vin" class="level1 ">Cortese vin</a></li><li  class="level1 nav-2-16"><a href="https://www.andrupvin.dk/druer/corvina-vin" class="level1 ">Corvina vin</a></li><li  class="level1 nav-2-17"><a href="https://www.andrupvin.dk/druer/corvinone-vin" class="level1 ">Corvinone vin</a></li><li  class="level1 nav-2-18"><a href="https://www.andrupvin.dk/druer/diverse-sorter" class="level1 ">Diverse sorter</a></li><li  class="level1 nav-2-19"><a href="https://www.andrupvin.dk/druer/dolcetto-vin" class="level1 ">Dolcetto vin</a></li><li  class="level1 nav-2-20"><a href="https://www.andrupvin.dk/druer/durif-vin" class="level1 ">Durif vin</a></li><li  class="level1 nav-2-21"><a href="https://www.andrupvin.dk/druer/fiano-di-avellino-vin" class="level1 ">Fiano di Avellino vin</a></li><li  class="level1 nav-2-22"><a href="https://www.andrupvin.dk/druer/gamay-vin" class="level1 ">Gamay vin</a></li><li  class="level1 nav-2-23"><a href="https://www.andrupvin.dk/druer/gewurztraminer-vin" class="level1 ">Gewurztraminer vin</a></li><li  class="level1 nav-2-24"><a href="https://www.andrupvin.dk/druer/godello-vin" class="level1 ">Godello vin</a></li><li  class="level1 nav-2-25"><a href="https://www.andrupvin.dk/druer/grauburgunder-vin" class="level1 ">Grauburgunder vin</a></li><li  class="level1 nav-2-26"><a href="https://www.andrupvin.dk/druer/greco-di-tufo-vin" class="level1 ">Greco di Tufo vin</a></li><li  class="level1 nav-2-27"><a href="https://www.andrupvin.dk/druer/grenache-vin" class="level1 ">Grenache vin</a></li><li  class="level1 nav-2-28"><a href="https://www.andrupvin.dk/druer/grenache-blanc-vin" class="level1 ">Grenache Blanc vin</a></li><li  class="level1 nav-2-29"><a href="https://www.andrupvin.dk/druer/grenache-gris-vin" class="level1 ">Grenache Gris vin</a></li><li  class="level1 nav-2-30"><a href="https://www.andrupvin.dk/druer/grenache-noir-vin" class="level1 ">Grenache Noir vin</a></li><li  class="level1 nav-2-31"><a href="https://www.andrupvin.dk/druer/grenache-tintorera-vin" class="level1 ">Grenache Tintorera vin</a></li><li  class="level1 nav-2-32"><a href="https://www.andrupvin.dk/druer/gruner-veltliner-vin" class="level1 ">Gruner Veltliner vin</a></li><li  class="level1 nav-2-33"><a href="https://www.andrupvin.dk/druer/malbec-vin" class="level1 ">Malbec vin</a></li><li  class="level1 nav-2-34"><a href="https://www.andrupvin.dk/druer/malvasia-vin" class="level1 ">Malvasia vin</a></li><li  class="level1 nav-2-35"><a href="https://www.andrupvin.dk/druer/marsanne-vin" class="level1 ">Marsanne vin</a></li><li  class="level1 nav-2-36"><a href="https://www.andrupvin.dk/druer/mataro-vin" class="level1 ">Mataro vin</a></li><li  class="level1 nav-2-37"><a href="https://www.andrupvin.dk/druer/mencia-vin" class="level1 ">Mencia vin</a></li><li  class="level1 nav-2-38"><a href="https://www.andrupvin.dk/druer/merlot-vin" class="level1 ">Merlot vin</a></li><li  class="level1 nav-2-39"><a href="https://www.andrupvin.dk/druer/molinaravin" class="level1 ">Molinara vin</a></li><li  class="level1 nav-2-40"><a href="https://www.andrupvin.dk/druer/monastrell-vin" class="level1 ">Monastrell vin</a></li><li  class="level1 nav-2-41"><a href="https://www.andrupvin.dk/druer/moscatel-seco-vin" class="level1 ">Moscatel Seco vin</a></li><li  class="level1 nav-2-42"><a href="https://www.andrupvin.dk/druer/moscato-vin" class="level1 ">Moscato vin</a></li><li  class="level1 nav-2-43"><a href="https://www.andrupvin.dk/druer/montepulciano-vin" class="level1 ">Montepulciano vin</a></li><li  class="level1 nav-2-44"><a href="https://www.andrupvin.dk/druer/mourvedre-vin" class="level1 ">Mourvedre vin</a></li><li  class="level1 nav-2-45"><a href="https://www.andrupvin.dk/druer/muscat-vin" class="level1 ">Muscat vin</a></li><li  class="level1 nav-2-46"><a href="https://www.andrupvin.dk/druer/nebbiolo-vin" class="level1 ">Nebbiolo vin</a></li><li  class="level1 nav-2-47"><a href="https://www.andrupvin.dk/druer/negroamaro-vin" class="level1 ">Negroamaro vin</a></li><li  class="level1 nav-2-48"><a href="https://www.andrupvin.dk/druer/nero-d-avola-vin" class="level1 ">Nero d`Avola vin</a></li><li  class="level1 nav-2-49"><a href="https://www.andrupvin.dk/druer/neroditroia" class="level1 ">Nero di Troia</a></li><li  class="level1 nav-2-50"><a href="https://www.andrupvin.dk/druer/pedro-ximenez-vin" class="level1 ">Pedro Ximenez vin</a></li><li  class="level1 nav-2-51"><a href="https://www.andrupvin.dk/druer/petit-verdot-vin" class="level1 ">Petit Verdot vin</a></li><li  class="level1 nav-2-52"><a href="https://www.andrupvin.dk/druer/petite-syrah-vin" class="level1 ">Petite Syrah vin</a></li><li  class="level1 nav-2-53"><a href="https://www.andrupvin.dk/druer/piedirosso-vin" class="level1 ">Piedirosso vin</a></li><li  class="level1 nav-2-54"><a href="https://www.andrupvin.dk/druer/pinot-blanc-vin" class="level1 ">Pinot Blanc vin</a></li><li  class="level1 nav-2-55"><a href="https://www.andrupvin.dk/druer/pinot-grigio-vin" class="level1 ">Pinot Grigio vin</a></li><li  class="level1 nav-2-56"><a href="https://www.andrupvin.dk/druer/pinot-gris-vin" class="level1 ">Pinot Gris vin</a></li><li  class="level1 nav-2-57"><a href="https://www.andrupvin.dk/druer/pinot-meunier-vin" class="level1 ">Pinot Meunier vin</a></li><li  class="level1 nav-2-58"><a href="https://www.andrupvin.dk/druer/pinot-noir-vin" class="level1 ">Pinot Noir vin</a></li><li  class="level1 nav-2-59"><a href="https://www.andrupvin.dk/druer/pinotage-vin" class="level1 ">Pinotage vin</a></li><li  class="level1 nav-2-60"><a href="https://www.andrupvin.dk/druer/primitivo-vin" class="level1 ">Primitivo vin</a></li><li  class="level1 nav-2-61"><a href="https://www.andrupvin.dk/druer/riesling-vin" class="level1 ">Riesling vin</a></li><li  class="level1 nav-2-62"><a href="https://www.andrupvin.dk/druer/rondinella-vin" class="level1 ">Rondinella vin</a></li><li  class="level1 nav-2-63"><a href="https://www.andrupvin.dk/druer/rousanne-vin" class="level1 ">Rousanne vin</a></li><li  class="level1 nav-2-64"><a href="https://www.andrupvin.dk/druer/sagrantino-vin" class="level1 ">Sagrantino vin</a></li><li  class="level1 nav-2-65"><a href="https://www.andrupvin.dk/druer/sangiovese-vin" class="level1 ">Sangiovese vin</a></li><li  class="level1 nav-2-66"><a href="https://www.andrupvin.dk/druer/sauvignon-blanc-vin" class="level1 ">Sauvignon Blanc vin</a></li><li  class="level1 nav-2-67"><a href="https://www.andrupvin.dk/druer/semillon-vin" class="level1 ">Sémillon vin</a></li><li  class="level1 nav-2-68"><a href="https://www.andrupvin.dk/druer/shiraz-vin" class="level1 ">Shiraz vin</a></li><li  class="level1 nav-2-69"><a href="https://www.andrupvin.dk/druer/susumaniello" class="level1 ">Susumaniello</a></li><li  class="level1 nav-2-70"><a href="https://www.andrupvin.dk/druer/sylvaner-vin" class="level1 ">Sylvaner vin</a></li><li  class="level1 nav-2-71"><a href="https://www.andrupvin.dk/druer/syrah-vin" class="level1 ">Syrah vin</a></li><li  class="level1 nav-2-72"><a href="https://www.andrupvin.dk/druer/tempranillo-vin" class="level1 ">Tempranillo vin</a></li><li  class="level1 nav-2-73"><a href="https://www.andrupvin.dk/druer/tintabarroca" class="level1 ">Tinta Barroca </a></li><li  class="level1 nav-2-74"><a href="https://www.andrupvin.dk/druer/tintocao" class="level1 ">Tinto Cão</a></li><li  class="level1 nav-2-75"><a href="https://www.andrupvin.dk/druer/tintaroriz" class="level1 ">Tinta Roriz </a></li><li  class="level1 nav-2-76"><a href="https://www.andrupvin.dk/druer/tourigafranca" class="level1 ">Touriga Franca</a></li><li  class="level1 nav-2-77"><a href="https://www.andrupvin.dk/druer/touriga-nacional" class="level1 ">Touriga Nacional</a></li><li  class="level1 nav-2-78"><a href="https://www.andrupvin.dk/druer/trebbiano-vin" class="level1 ">Trebbiano vin</a></li><li  class="level1 nav-2-79"><a href="https://www.andrupvin.dk/druer/verdejo-vin" class="level1 ">Verdejo vin</a></li><li  class="level1 nav-2-80"><a href="https://www.andrupvin.dk/druer/verdicchio-vin" class="level1 ">Verdicchio vin</a></li><li  class="level1 nav-2-81"><a href="https://www.andrupvin.dk/druer/viognier-vin" class="level1 ">Viognier vin</a></li><li  class="level1 nav-2-82"><a href="https://www.andrupvin.dk/druer/weissburgunder-vin" class="level1 ">Weissburgunder vin</a></li><li  class="level1 nav-2-83 last"><a href="https://www.andrupvin.dk/druer/zinfandel-vin" class="level1 ">Zinfandel vin</a></li><div class="tester hidden"></div></ul></ul></li><li  class="level0 nav-3"><a href="https://www.andrupvin.dk/smagekasser" class="level0 ">Smagekasser</a></li><li  class="level0 nav-4"><a href="https://www.andrupvin.dk/vintilbud" class="level0 ">Tilbud</a></li><li  class="level0 nav-5"><a href="https://www.andrupvin.dk/nyheder" class="level0 ">Nyhed</a></li><li  class="level0 nav-6 parent"><a href="https://www.andrupvin.dk/spiritus" class="level0 has-children">Spiritus</a><ul class="level0 menu-style-simpel-liste"><ul class="nav-wrap"><li class="level1 view-all"><a class="level1" href="https://www.andrupvin.dk/spiritus">Se alle Spiritus</a></li><li  class="level1 nav-6-1 first"><a href="https://www.andrupvin.dk/spiritus/rom" class="level1 ">Rom</a></li><li  class="level1 nav-6-2"><a href="https://www.andrupvin.dk/spiritus/gin" class="level1 ">Gin</a></li><li  class="level1 nav-6-3"><a href="https://www.andrupvin.dk/spiritus/whisky" class="level1 ">Whisky</a></li><li  class="level1 nav-6-4"><a href="https://www.andrupvin.dk/spiritus/cognac-brandy" class="level1 ">Cognac &amp; Brandy</a></li><li  class="level1 nav-6-5"><a href="https://www.andrupvin.dk/spiritus/likor" class="level1 ">Likør &amp; andet</a></li><li  class="level1 nav-6-6"><a href="https://www.andrupvin.dk/spiritus/akvavit-snaps" class="level1 ">Akvavit &amp; Snaps</a></li><li  class="level1 nav-6-7"><a href="https://www.andrupvin.dk/spiritus/vodka" class="level1 ">Vodka</a></li><li  class="level1 nav-6-8 last"><a href="https://www.andrupvin.dk/spiritus/drinks-tilbehor" class="level1 ">Drinks Tilbehør</a></li><div class="tester hidden"></div></ul></ul></li><li  class="level0 nav-7 parent"><a href="https://www.andrupvin.dk/ovrigt" class="level0 has-children">Øvrigt</a><ul class="level0 menu-style-simpel-liste"><ul class="nav-wrap"><li class="level1 view-all"><a class="level1" href="https://www.andrupvin.dk/ovrigt">Se alle Øvrigt</a></li><li  class="level1 nav-7-1 first"><a href="https://www.andrupvin.dk/ovrigt/alkoholfri-vin" class="level1 ">Alkoholfri vin</a></li><li  class="level1 nav-7-2"><a href="https://www.andrupvin.dk/ovrigt/specialoel" class="level1 ">Specialøl</a></li><li  class="level1 nav-7-3"><a href="https://www.andrupvin.dk/ovrigt/tonic-andre-drikke" class="level1 ">Tonic &amp; andre drikke</a></li><li  class="level1 nav-7-4"><a href="https://www.andrupvin.dk/ovrigt/magnum-flasker" class="level1 ">Magnum flasker</a></li><li  class="level1 nav-7-5"><a href="https://www.andrupvin.dk/ovrigt/gavekort" class="level1 ">Gavekort</a></li><li  class="level1 nav-7-6 last"><a href="https://www.andrupvin.dk/ovrigt/gaveaesker" class="level1 ">Gaveæsker</a></li><div class="tester hidden"></div></ul></ul></li><li  class="level0 nav-8 last parent"><a href="https://www.andrupvin.dk/delikatessen" class="level0 has-children">Delikatesse</a><ul class="level0 menu-style-simpel-liste"><ul class="nav-wrap"><li class="level1 view-all"><a class="level1" href="https://www.andrupvin.dk/delikatessen">Se alle Delikatesse</a></li><li  class="level1 nav-8-1 first"><a href="https://www.andrupvin.dk/delikatessen/summerbird" class="level1 ">Summerbird</a></li><li  class="level1 nav-8-2"><a href="https://www.andrupvin.dk/delikatessen/xocolatl" class="level1 ">Xocolatl</a></li><li  class="level1 nav-8-3"><a href="https://www.andrupvin.dk/delikatessen/wally-whiz" class="level1 ">Wally &amp; Whiz</a></li><li  class="level1 nav-8-4"><a href="https://www.andrupvin.dk/delikatessen/karameller" class="level1 ">Karameller</a></li><li  class="level1 nav-8-5"><a href="https://www.andrupvin.dk/delikatessen/bulow-lakrids" class="level1 ">Lakrids by Bülow</a></li><li  class="level1 nav-8-6"><a href="https://www.andrupvin.dk/delikatessen/vestjyske-delikatesser" class="level1 ">Vestjyske Delikatesser</a></li><li  class="level1 nav-8-7"><a href="https://www.andrupvin.dk/delikatessen/diverse-snacks-sodt" class="level1 ">Diverse Snacks &amp; Sødt</a></li><li  class="level1 nav-8-8"><a href="https://www.andrupvin.dk/delikatessen/pestoer-specialiteter" class="level1 ">Pestoer &amp; Specialiteter</a></li><li  class="level1 nav-8-9"><a href="https://www.andrupvin.dk/delikatessen/kaffe-te-og-tilbehor" class="level1 ">Kaffe, Te og Tilbehør</a></li><li  class="level1 nav-8-10"><a href="https://www.andrupvin.dk/delikatessen/iced-espresso" class="level1 ">Iced Espresso</a></li><li  class="level1 nav-8-11"><a href="https://www.andrupvin.dk/delikatessen/nuts" class="level1 ">Nuts</a></li><li  class="level1 nav-8-12"><a href="https://www.andrupvin.dk/delikatessen/lakridseriet" class="level1 ">Lakridseriet</a></li><li  class="level1 nav-8-13"><a href="https://www.andrupvin.dk/delikatessen/paske-2022" class="level1 ">Påske 2022</a></li><li  class="level1 nav-8-14 last"><a href="https://www.andrupvin.dk/delikatessen/valentinsdag" class="level1 ">Valentinsdag</a></li><div class="tester hidden"></div></ul></ul></li>            
+                                    
+<li class="level0"><a href="/vinguide">Vinguide</a></li>
+			
+                                    
+<li class="level0 parent customer-service"><a class="level0 has-children" href="/kontakt-os">Kundeservice</a>
+<ul class="level0 menu-style-simpel-liste">
+<ul class="nav-wrap">
+<li class="level1"><a class="level1" href="/om-butikken">Om butikken</a></li>
+<li class="level1"><a class="level1" href="/handelsbetingelser">Handelsbetingelser</a></li>
+<li class="level1"><a title="Fragt og levering" href="/fragt-levering" target="_self">Fragt og levering</a></li>
+<li class="level1"><a class="level1" href="/prisgaranti">Prisgaranti</a></li>
+<li class="level1"><a class="level1" href="/tilfredshedsgaranti">Tilfredshedsgaranti</a></li>
+<li class="level1"><a class="level1" href="/kontakt-os">Kontakt os</a></li>
+<li class="level1"><a title="F&aring; de bedste tilbud f&oslash;r alle andre" href="/tilmeld-til-nyhedsbrev" target="_self">F&aring; de bedste vintilbud</a></li>
+</ul>
+</ul>
+</li>
+        </ol>
+    </nav>
+	</div>
+</div>
+
+                <div class="main-container col1-layout">
+            <div class="main">
+                                <div class="col-main">
+                                            <script type="text/javascript">
+        document.observe("dom:loaded", function() {
+        	BaseCart.AjaxCart.animateToCartEnabled = 0;
+        	BaseCart.AjaxCart.openMinicartEnabled = 0;
+        	BaseCart.AjaxCart.showModalEnabled = 1;
+        	
+        	// override product view onclick
+			jQuery('.catalog-product-view .product-view .button.btn-cart').each(function(i,el) {
+				jQuery(el).attr('onclick', 'BaseCart.AjaxCart.productAddToCartForm.submit(this)');
+			});
+
+        	// override product list onclick
+			jQuery('.products-grid .item .button.btn-cart').each(function(i,el) {
+				jQuery(el).attr('onclick', 'BaseCart.AjaxCart.productListAddToCartFormSubmit(this)');
+			});
+    	});
+	</script>
+
+<div class="page-title">
+    <h1>Vi har modtaget din ordre.</h1>
+</div>
+<h2 class="sub-title">Vi takker for dit køb!</h2>
+
+    <p>Ordrenummer: 100107184</p>
+    <p>En ordrebekræftelse er blevet sendt til din e-mail-adresse.</p>
+
+
+
+    <div class="win-order-back">
+                
+                        <h1>VIND DIT K&Oslash;B!</h1>
+<p>Tilmeld dig nyhedsbrevet og deltag i konkurrencen om at vinde et gavekort p&aring;:</p>
+<p><span style="color: #800000; font-size: xx-large;"><strong style="font-size: 1.5em;"><span class="price">387,90 DKK</span></strong></span></p>
+<p>
+			<div id="mc_embed_signup">
+			    <form action="//andrupvin.us2.list-manage.com/subscribe/post?u=7c9a1d7e4daf154c39564d248&amp;id=bb83de6e5c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+			        <div id="mc_embed_signup_scroll">
+			    	
+			    <div style="padding-bottom: 15px" class="mc-field-group">
+			    	<label for="mce-EMAIL">E-mailadresse</label>
+			    	<input type="email" value="kq@tric.dk" name="EMAIL" class="required email" id="mce-EMAIL">
+			    </div>
+			        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+			        	<input type="hidden" name="group[20][32]" value="1"> <!-- Vind mit kÃ¸b -->
+			        	<input type="text" name="b_7c9a1d7e4daf154c39564d248_bb83de6e5c" tabindex="-1" value="">
+			        </div>
+			        <div class="clear"><input type="submit" value="Tilmeld nyhedsbrev og deltag" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+			        </div>
+			    </form>
+			</div>    
+	    </p>
+<p>Vi tr&aelig;kker en ny vinder hver m&aring;ned, du deltager i den m&aring;ned du tilmelder dig.</p>
+<p><span style="text-decoration: underline;">Er du allerede tilmeldt, deltager du automatisk i konkurrencen i den givne m&aring;ned du handler.</span></p>
+<p>Ved deltagelse accepterer du, at AndrupVin.dk offentligg&oslash;re dit navn p&aring; vores hjemmeside hvis du vinder.</p> 
+    </div>
+
+<div class="buttons-set">
+    <button type="button" class="button" title="Fortsæt med at shoppe" onclick="window.location='https://www.andrupvin.dk/'"><span><span>Fortsæt med at shoppe</span></span></button>
+</div>
+<span
+    class="clerk"
+    data-api="log/sale"
+    data-key="EFaTW7ZOrf4gMx0CjFazXLHCQBccutEa"
+    data-sale="100107184"
+    data-customer="6744"
+    data-products='[{"id":622,"quantity":1,"price":8.95},{"id":2796,"quantity":1,"price":329.95}]'
+    data-email="kq@tric.dk">
+</span>
+<p>
+    
+</p>
+                </div>
+            </div>
+        </div>
+                <div class="subfooter">
+	<div class="inner">
+		<div class="footer-newsletter-container">
+			<div class="footer-newsletter-inner">
+								<p>G&aring; ikke glip af de bedste vintilbud<br />til Danmarks skarpeste priser!</p>				<!-- Begin MailChimp Signup Form -->
+				<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css" />
+				<div id="mc_embed_signup">
+					<form id="mc-embedded-subscribe-form" class="validate" action="//andrupvin.us2.list-manage.com/subscribe/post?u=7c9a1d7e4daf154c39564d248&amp;id=bb83de6e5c" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+						<div id="mc_embed_signup_scroll">
+							<div class="mc-field-group">
+							    <input id="mce-EMAIL" class="required email" type="email" placeholder="Indtast e-mail" value="" name="EMAIL" />
+							</div>
+							<div id="mce-responses" class="clear" style="height: 1px;">&nbsp;</div>
+							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							<div style="position: absolute; left: -5000px;"><input type="text" value="" name="b_7c9a1d7e4daf154c39564d248_bb83de6e5c" /></div>
+							<div style="display: inline-block;">
+								<input id="mc-embedded-subscribe" class="button" style="background-color: #b80028;margin:6px 5px 10px 0;height: 40px;border-radius: 0;vertical-align: inherit;font-size:13px;min-width:115px;" type="submit" value="Tilmeld" />
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--End mc_embed_signup--> 
+			</div>
+		</div>
+					<div class="footer-customersupport">
+				<div class="footer-custommersupport-box clearfix">
+					<h2>Brug for hj&aelig;lp? <br />Ring <a href="tel:+4550809005">50 80 90 05</a></h2>
+<p>Mandag-Fredag: 09.00-17.00<br />L&oslash;rdag: 09.00-13.00</p>				</div>
+			</div>
+			<div class="footer-customersupport">
+				<div class="footer-custommersupport-box fb clearfix">
+								<div class="fbmessenger-contact">
+			<a href="https://m.me/andrupvin" target="_blank" title="Chat with us on Messenger" alt="Chat with us on Messenger">
+				<h2>Skriv til os på Facebook Messenger</h2>
+				<img class="fbmessenger-contact-img" src="https://www.andrupvin.dk/skin/frontend/base/default/fbmessenger/fbmessenger.svg" alt="Chat with us on Messenger" /> 
+			</a>
+		</div>
+	
+<!-- <a href="http://www.facebook.com/dialog/send?app_id=123456789&link=http://andrupvin.dk&redirect_uri=https://www.andrupvin.dk/"></a> -->
+
+				</div>
+			</div>
+			</div>
+</div>
+
+<div class="footer-usp">
+	<div class="footer-usp-inner">
+				 
+										
+<div class="usp"><a href="/handelsbetingelser"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/wine.svg"/></a>Fra vinbonde til din hovedd&oslash;r. Kvalitetsvin til lave priser!</span></div><div class="plus">+</div>
+<div class="usp"><a href="/handelsbetingelser"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/smile.svg"/></a>100% tilfredshedsgaranti og 30 dages returret.</span></div><div class="plus">+</div>
+<div class="usp"><a href="/handelsbetingelser"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/truck.svg"/></a>Gratis fragt v/ 499,00 kr. med dag-til-dag levering.</span></div><div class="plus">+</div>
+<div class="usp"><a href="/handelsbetingelser"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/lock.svg"/></a>Nem og sikker betaling.</span></div><div class="plus">+</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="footer-bottom">
+	    <div class="container top">
+		    <div class="inner">
+		        <div class="footer-column">
+			        <div class="footer-column-mobile">
+			        	<button type="button" class="footer-column-mobile-header"></button>
+   			        	<div class="footer-column-mobile-inner hidden">
+   			        	</div>
+			        </div>
+			        <div class="footer-column-desktop">
+			            			            			            			            <p class="h2 hide-mobile">Kundeservice:</p>
+<ul>
+<li><a href="/om-butikken">Om butikken</a></li>
+<li><a href="/handelsbetingelser">Handelsbetingelser</a></li>
+<li><a title="Fragt og levering" href="/fragt-levering" target="_self">Fragt og levering</a></li>
+<li><a href="/tilfredshedsgaranti">Tilfredshedsgaranti</a></li>
+<li><a href="/kontakt-os">Kontakt os</a></li>
+<li><a title="F&aring; de bedste tilbud f&oslash;r alle andre" href="/tilmeld-til-nyhedsbrev" target="_self">F&aring; de bedste vintilbud</a></li>
+<li><a title="Cookie- og privatlivspolitik" href="/cookieogprivatlivspolitik" target="_self">Cookie- og privatlivspolitik</a></li>
+</ul>			        </div>
+		        </div>
+		        <div class="footer-column">
+			        <div class="footer-column-mobile">
+   			        	<button type="button" class="footer-column-mobile-header"></button>
+   			        	<div class="footer-column-mobile-inner hidden">
+   			        	</div>
+			        </div>
+   			        <div class="footer-column-desktop">
+			            			            			            			            <p class="h2 hide-mobile">Kontakt os:</p>
+<p>AndrupVin.dk ApS<br /> <a href="https://goo.gl/maps/sokmV44y4LiZRyeC6" target="_blank">H&aring;ndv&aelig;rkervej 2</a><br /><a href="https://goo.gl/maps/sokmV44y4LiZRyeC6" target="_blank"> DK-6710 Esbjerg V</a><br /> CVR: 38565699</p>
+<p><br />Tlf. <a href="tel:+45509005">+45 50 80 90 05</a> <br /><a href="mailto:info@andrupvin.dk">info@andrupvin.dk</a></p>
+<p><a href="//facebook.com/AndrupVin/" target="_blank"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/facebook-white.svg"/></a><a href="//instagram.com/andrupvindk/" target="_blank"><img src="https://www.andrupvin.dk/skin/frontend/andrupvin/default/icons/instagram-white.svg"/></a></p>   			        </div>
+		        </div>
+		        <div class="footer-column">
+			        <div class="footer-column-mobile">
+				        <button type="button" class="footer-column-mobile-header"></button>
+   			        	<div class="footer-column-mobile-inner hidden">
+   			        	</div>
+			        </div>
+			        <div class="footer-column-desktop">
+			            			            			            			            <p class="h2">Showroom i Esbjerg:</p>
+<p>Man-tirs-onsdag:<strong>&nbsp;</strong>Lukket<br />Torsdag-fredag:&nbsp;10.00-17.30 <br />L&oslash;rdag: 10.00-13.00<br />&nbsp;</p>
+<p class="h2">Ring til os:</p>
+<p>Mandag til fredag: 09.00-17:00<br />L&oslash;rdag:&nbsp;09.00-13.00</p>			        </div>
+		        </div>
+		        <div class="footer-column">
+			        <div class="footer-column-mobile">
+				        <button type="button" class="footer-column-mobile-header"></button>
+   			        	<div class="footer-column-mobile-inner hidden">
+   			        	</div>
+			        </div>
+			        <div class="footer-column-desktop">
+			            									            			            <p class="h2 hide-mobile">Mit Andrupvin:</p>
+<p><a href="/customer/account/login/">Log ind</a> eller <a href="/customer/account/create/">opret en konto</a> p&aring; Andrupvin.dk og f&aring; f&oslash;lgende fordele som bruger:</p>
+<p>&nbsp;&nbsp;</p>
+<ul style="margin-top: 8px;">
+<li>Gennemf&oslash;re dine k&oslash;b hurtigere</li>
+<li>Mulighed for at gemme flere leveringsadresser</li>
+<li>Spore dine ordrer p&aring; din konto</li>
+<li>Se din saldo p&aring; k&oslash;bte gavekort</li>
+</ul>			        </div>
+		        </div>
+		    </div>
+	    </div>
+	    <div class="container bottom">
+		    <div class="inner">
+				<p style="text-align: center;"><img alt="" src="/media/wysiwyg/Andrupvin/kort.png" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a title="Se vores kundeanmeldelser p&aring; Trustpilot" href="https://dk.trustpilot.com/review/andrupvin.dk" target="_blank"><img title="Se vores kundeanmeldelser p&aring; Trustpilot" alt="Se vores kundeanmeldelser p&aring; Trustpilot" src="https://www.andrupvin.dk/media/wysiwyg/Andrupvin/trustpilot-andrupvin.png" /></a><a title="Se kontrolrapport for Andrupvin.dk" href="http://www.findsmiley.dk/Sider/Search.aspx?k=andrupvin" target="_blank"><img title="Se kontrolrapport for Andrupvin.dk" alt="Se kontrolrapport for Andrupvin.dk" src="https://www.andrupvin.dk/media/wysiwyg/Andrupvin/se-kontrolrapport-andrupvin_1.png" /></a></p>		    </div>
+	    </div>
+	    <div class="showdesktop"></div>
+	</div>
+</div>
+
+<div class="footer-mobile">
+	
+</div>
+<a href="#" id="totop"><i class="icon-up-open"></i></a>
+
+
+                
+
+
+<span
+    class="clerk"
+    data-template="@live-sgning-2018-design"
+    data-live-search-categories="0"
+    data-live-search-categories-title="Kategorier"
+    data-live-search-products-title="Produkter"
+    data-bind-live-search="#search">
+</span>
+<style type="text/css">
+	#search_autocomplete { display: none !important; }
+</style>
+
+<script type="text/javascript">
+    window.clerkAsyncInit = function() {
+        Clerk.config({
+            key: 'EFaTW7ZOrf4gMx0CjFazXLHCQBccutEa',
+            templateFormatters: {
+                form_key: function () {
+                    return 'gTTPUYrXyYTKW15k';
+                }
+            }
+        });
+    };
+    (function(){
+        var e = document.createElement('script'); e.type='text/javascript'; e.async = true;
+        e.src = document.location.protocol + '//api.clerk.io/static/clerk.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s);
+    })();
+</script>
+<script>var FEED_BASE_URL="https://www.andrupvin.dk/";</script><script src="https://www.andrupvin.dk/js/mirasvit/code/feedexport/performance.js" type="text/javascript"></script><script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        tp('createInvitation',{"recipientEmail":"kq@tric.dk","recipientName":"Kristian Qvistgaard","referenceId":"100107184","source":"Magento-1.9.2.1","pluginVersion":"2.5.618","hook":"magento1_success","orderStatusId":"new","orderStatusName":"new","products":[{"price":9.95,"currency":"DKK","categories":["\u00d8vrigt","Tonic & andre drikke",null],"description":"Tonic Water. Forfriskende tonic water fra San Pellegrino. Fantastisk alene, men ogs\u00e5 til at blande i din drink. 33 cl.Prisen er\u00a0inkl. pant.","images":["https:\/\/www.andrupvin.dk\/media\/catalog\/product\/s\/p\/sp_tonica.png"],"tags":[],"meta":{"title":"San Pellegrino Acqua Tonica 33 cl","keywords":"San Pellegrino Acqua Tonica 33 cl","description":"Tonic Water. Forfriskende tonic water fra San Pellegrino. Fantastisk alene, men ogs\u00e5 til at blande i din drink. 33 cl.Prisen er\u00a0inkl. pant."},"manufacturer":"","productUrl":"https:\/\/www.andrupvin.dk\/san-pellegrino-acqua-tonica","name":"San Pellegrino Acqua Tonica 33 cl","brand":"","productId":"622","sku":"","mpn":"","gtin":"","imageUrl":"https:\/\/www.andrupvin.dk\/media\/catalog\/product\/s\/p\/sp_tonica.png"},{"price":9.95,"currency":"DKK","categories":["\u00d8vrigt","Tonic & andre drikke",null],"description":"Spansk kultvin i meget begr\u00e6nset antal Clio er et blend p\u00e5 70% Monastrell fra gamle vinstokke, og 30% Cabernet Sauvignon fra det syd\u00f8stlige vinomr\u00e5de DO Jumilla. Hvert \u00e5r besk\u00e6res vinstokkene kraftigt s\u00e5 de kun producerer et yderst begr\u00e6nset antal druer. Alle druer h\u00e5ndh\u00f8stes, og kun de absolut bedste druer udv\u00e6lges til denne vin.\u00a0Lang udbl\u00f8dning og daglige pumpovers sikrer optimal ekstraktion af farve, tanniner og kraft. Vinen har lagret hele 24 m\u00e5neder p\u00e5 nye franske og amerikanske fade. Der produceres kun 40.000 flasker \u00e5rligt af denne fantastiske vin. Disse vine s\u00e6lges til stort set alle topresturanter i Spanien, og udvalgte vinbutikker.\u00a0Vi har v\u00e6ret heldige at \"f\u00e5 lov\" til at k\u00f8be 1200 flasker af \u00e5rgang 2016. Vinens elementer Farven er uigennemsigtig lilla med en kulsort midte. Intense og komplekse aromaer v\u00e6lter op af glasset, med bl\u00e5b\u00e6r, bromb\u00e6r og krydderier samt dyre fadnoter. Smagen er kraftfuld, rig og overd\u00e5dig, med voldsom koncentrerede m\u00f8rke frugter, krydderier og fadnoter. Den voldsomme intensitet er flot afstemt af perfekt integrerede tanniner og afstemt syre.\u00a0Eftersmagen er himmelsk og bliver\u00a0h\u00e6ngende i adskillige minutter. Serveringstemperatur og anvendelse Vinen b\u00f8r serveres ved 16-18\u00b0 grader for den optimale vinoplevelse. Denne vin fortjener slagterens absolut bedste udsk\u00e6ring. Vinen kan nydes nu efter et par timers iltning, men vi anbefaler at lade den ligge og udvikle sig\u00a0i yderligere 3-4 \u00e5r. Denne vin har lagringspotentiale i op til\u00a017-20 \u00e5r fra h\u00f8st\u00e5ret. Clio er en af Spaniens mest eftertragtede vine, og n\u00e5r man smager vinen forst\u00e5r man tydeligt hvorfor den n\u00e6rmest fl\u00e5es v\u00e6k \u00e5r efter \u00e5r. Kvaliteten er urimelig h\u00f8j, og selv om vinen har langt mere intensitet, fylde og kraft end stort set alle andre vine, s\u00e5 form\u00e5r Bodegas El Nido af styre det hele af med perfekt integrerede tanniner og n\u00f8je afstemt syre. Bravo! Hvem kommer f\u00f8rst?","images":["https:\/\/www.andrupvin.dk\/media\/catalog\/product\/s\/p\/sp_tonica.png"],"tags":[],"meta":{"title":"Bodegas El Nido \u0027Clio\u0027 2015 - Spansk kultvin - Fri fragt v\/499,00 kr.","keywords":"Bodegas El Nido \u0027Clio\u0027 2016","description":"Spansk kultvin i meget begr\u00e6nset antal. Clio er et blend p\u00e5 70% Monastrell fra gamle vinstokke, og 30% Cabernet Sauvignon fra det syd\u00f8stlige vinomr\u00e5de DO Jumilla. 100% tilfredshedsgaranti."},"manufacturer":"","productUrl":"https:\/\/www.andrupvin.dk\/san-pellegrino-acqua-tonica","name":"Bodegas El Nido \u0027Clio\u0027 2016","brand":"","productId":"2796","sku":"","mpn":"","gtin":"","imageUrl":"https:\/\/www.andrupvin.dk\/media\/catalog\/product\/c\/l\/clio_1_1.png"}],"productSkus":["",""],"templateParams":["1","1"],"totalCost":"387.9000","currency":"DKK"});
+    });
+</script>    </div>
+</div>
+<!-- <script id="CookieConsent" src="https://policy.cookieinformation.com/uc.js" data-cbid="fe0f02f2-65b2-485e-8489-23585983f652" type="text/javascript"></script> -->
+
+
+
+<!-- LeadScoreApp -->
+<script type="text/javascript">var _lsa = {a: 1000407};(function() {var lsa = document.createElement('script');lsa.type = 'text/javascript';lsa.async = true;lsa.src = "https://www.leadscoreapp.dk/js/ls.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(lsa, s);})();</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQSR3TW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"2a9add332d","applicationID":"449599023","transactionName":"YVdbN0NWC0oHUENbW1gdeABFXgpXSVBfV1ddXUwXRVIWTQNBGFtaUldBTEJCBloDQEQ=","queueTime":0,"applicationTime":2937,"atts":"TRBYQQtMGEQ=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
+
